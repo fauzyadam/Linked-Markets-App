@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_pro/carousel_pro.dart';
+
 
 
 class homePgae extends StatefulWidget {
@@ -11,6 +13,22 @@ class homePgae extends StatefulWidget {
 class _homePgaeState extends State<homePgae> {
   @override
   Widget build(BuildContext context) {
+    Widget image_carousel = Container(
+      height: 200,
+      child: Carousel(
+        boxFit: BoxFit.cover,
+        images:const [
+          AssetImage('assets/images/kaba.jpg'),
+          AssetImage('assets/images/kaba.jpg'),
+          AssetImage('assets/images/todo 4.jpg'),
+          AssetImage('assets/images/kaba.jpg'),
+          AssetImage('assets/images/kaba.jpg'),
+        ],
+        autoplay: false,
+        animationCurve: Curves.fastOutSlowIn,
+        animationDuration: Duration(milliseconds: 1000),
+      ),
+    );
     return Scaffold(
       appBar: AppBar(
         elevation: 0.1,
@@ -99,14 +117,28 @@ class _homePgaeState extends State<homePgae> {
           InkWell(
           onTap: (){},
           child: const ListTile(
-            title: Text("About"),
+            title: Text("Enquries"),
             leading: Icon(Icons.help,color: Colors.red, size: 30,),
+          ),
+        ),
+
+        
+          InkWell(
+          onTap: (){},
+          child: const ListTile(
+            title: Text("Comments"),
+            leading: Icon(Icons.comment_bank,color: Colors.red, size: 30,),
           ),
         ),
           ],
           
         ),
       ),
+      body: ListView(
+        children: [
+         image_carousel 
+        ],
+      ) ,
     );
   }
 }
