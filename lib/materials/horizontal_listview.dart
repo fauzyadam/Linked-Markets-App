@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 // my import
 import 'package:linked_markets_app/materials/horizontal_listview.dart';
+import 'package:linked_markets_app/materials/products.dart';
 
 class horizontalList extends StatefulWidget {
   const horizontalList({ Key? key }) : super(key: key);

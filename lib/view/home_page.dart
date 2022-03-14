@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:linked_markets_app/materials/horizontal_listview.dart';
+import 'package:linked_markets_app/materials/products.dart';
 
 
 
@@ -150,7 +151,12 @@ class _homePgaeState extends State<homePgae> {
       horizontalList(),
               const Padding(padding: EdgeInsets.all(18.0),
          child: Text("Recent Products"),
-)
+),
+     // grid view
+      Container(
+        height: 320,
+        child: Products(),
+      )
         ],
       ) ,
     );
