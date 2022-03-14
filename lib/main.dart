@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:linked_markets_app/view/home_page.dart';
-
+import 'package:carousel_pro/carousel_pro.dart';
+import 'package:linked_markets_app/materials/horizontal_listview.dart';
 void main() {
   runApp(const MyApp());
 }

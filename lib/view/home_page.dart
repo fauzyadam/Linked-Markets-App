@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:linked_markets_app/materials/horizontal_listview.dart';
 
 
 
@@ -19,14 +20,18 @@ class _homePgaeState extends State<homePgae> {
         boxFit: BoxFit.cover,
         images:const [
           AssetImage('assets/images/kaba.jpg'),
-          AssetImage('assets/images/kaba.jpg'),
+          AssetImage('assets/images/Marie.jpg'),
           AssetImage('assets/images/todo 4.jpg'),
-          AssetImage('assets/images/kaba.jpg'),
-          AssetImage('assets/images/kaba.jpg'),
+          AssetImage('assets/images/hitz.jpg'),
+          AssetImage('assets/images/Morterz.jpg'),
+             AssetImage('assets/images/todo 5.jpg'),
+                AssetImage('assets/images/todo 3.jpg'),
         ],
-        autoplay: false,
+        autoplay:false,
         animationCurve: Curves.fastOutSlowIn,
-        animationDuration: Duration(milliseconds: 1000),
+        animationDuration: const Duration(milliseconds: 10),
+        dotSize: 4.0,
+        indicatorBgPadding: 8.0,
       ),
     );
     return Scaffold(
@@ -136,7 +141,16 @@ class _homePgaeState extends State<homePgae> {
       ),
       body: ListView(
         children: [
-         image_carousel 
+          // image_carousel begins here
+         image_carousel ,
+         const Padding(padding: EdgeInsets.all(8.0),
+         child: Text("Categories"),
+),
+      // horizontal listView begins here
+      horizontalList(),
+              const Padding(padding: EdgeInsets.all(18.0),
+         child: Text("Recent Products"),
+)
         ],
       ) ,
     );
