@@ -20,13 +20,13 @@ class _homePgaeState extends State<homePgae> {
       child: Carousel(
         boxFit: BoxFit.cover,
         images:const [
-          AssetImage('assets/images/kaba.jpg'),
-          AssetImage('assets/images/Marie.jpg'),
-          AssetImage('assets/images/todo 4.jpg'),
-          AssetImage('assets/images/hitz.jpg'),
-          AssetImage('assets/images/Morterz.jpg'),
-             AssetImage('assets/images/todo 5.jpg'),
-                AssetImage('assets/images/todo 3.jpg'),
+          AssetImage('assets/images/kente 1.jpg'),
+          AssetImage('assets/images/kente 2.jpg'),
+          AssetImage('assets/images/watch 1.jpg'),
+          AssetImage('assets/images/watch 2.jpg'),
+          AssetImage('assets/images/hajj faith 7.png'),
+          AssetImage('assets/images/todo 5.jpg'),
+          AssetImage('assets/images/todo 3.jpg'),
         ],
         autoplay:false,
         animationCurve: Curves.fastOutSlowIn,
@@ -76,7 +76,7 @@ class _homePgaeState extends State<homePgae> {
                 ),
               ),
               decoration: const BoxDecoration(
-                color: Colors.red
+                color: Colors.redAccent
               ),
               ),
         //body
