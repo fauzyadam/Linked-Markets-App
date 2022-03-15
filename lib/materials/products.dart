@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+ 
+ //creation of a class called products
 
 class Products extends StatefulWidget {
  
@@ -11,20 +13,26 @@ class Products extends StatefulWidget {
 class _ProductsState extends State<Products> {
     var product_list =[
     {
-      "name": "wedding",
-      "picture": "assets/images/products/wedding.png",
+      "name": " wedding",
+      "picture": 'assets/images/hajj faith 3.png',
        "price":  "120"
     },
      {
-      "name": "kaba",
-      "picture": "assets/images/products/kaba.png",
+      "name": " ankara",
+      "picture": 'assets/images/hajj faith 2.png',
        "price":  "120"
     },
-     {
-      "name": "wedding",
-      "picture": "assets/images/products/wedding.png",
+    {
+      "name": " casual wear",
+      "picture": 'assets/images/hajj faith 6.png',
        "price":  "120"
-    } 
+    },
+    {
+      "name": " dress",
+      "picture": 'assets/images/hajj faith 1.png',
+       "price":  "120"
+    }, 
+    
     ];
   @override
   Widget build(BuildContext context) {
@@ -54,8 +62,43 @@ class Single_product extends StatelessWidget {
  }):super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return Card(
+      child: Hero(
+        tag: product_name,
+        child: Material(
+          child: InkWell(
+            onTap:() {},
+            child: GridTile(
+              footer: Container(
+                color: Colors.white,
+                child: ListTile(
+                  leading: Text(product_name, 
+                  style: const TextStyle(
+                   fontSize: 10, fontWeight: FontWeight.bold
+                   ),
+                  ),
+                  title: Text("Contact Designer",
+                 style: const TextStyle(
+                   fontSize: 10, fontWeight: FontWeight.bold,
+                   color: Colors.red,
+                   ),
+                  ),
+                 subtitle: Text("0552871208",
+                 style: const TextStyle(
+                   fontSize: 10, fontWeight: FontWeight.bold,
+                   color: Colors.black,
+                   decoration: TextDecoration.lineThrough,
+                   ),
+                 ),
+                ),
+              ),
+              child: Image.asset(Product_picture,
+              fit: BoxFit.cover,
+              )),
+          ),
+          
+           ),
+        ),
     );
   }
 }
