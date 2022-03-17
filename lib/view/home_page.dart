@@ -5,14 +5,14 @@ import 'package:linked_markets_app/materials/products.dart';
 
 
 
-class homePgae extends StatefulWidget {
-  const homePgae({ Key? key }) : super(key: key);
+class HomePage extends StatefulWidget {
+  const HomePage({ Key? key }) : super(key: key);
 
   @override
-  State<homePgae> createState() => _homePgaeState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _homePgaeState extends State<homePgae> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     Widget image_carousel = Container(
@@ -55,7 +55,12 @@ class _homePgaeState extends State<homePgae> {
             Icons.search,
             color: Colors.white,
             )),
-            IconButton(onPressed: (){}, 
+            IconButton(onPressed: (){
+Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (BuildContext context)=> const Card()));
+
+            }, 
           icon: const Icon(
             Icons.shopping_cart,
             color: Colors.white,
@@ -105,10 +110,14 @@ class _homePgaeState extends State<homePgae> {
         ),
 
           InkWell(
-          onTap: (){},
+          onTap: (){
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (BuildContext context)=> const Card()));
+          },
           child: const ListTile(
-            title: Text("Categories"),
-            leading: Icon(Icons.dashboard),
+            title: Text("Shopping Cart"),
+            leading: Icon(Icons.shopping_cart),
           ),
         ),
 
@@ -156,7 +165,11 @@ class _homePgaeState extends State<homePgae> {
       Container(
         height: 320,
         child: Products(),
-      )
+      ),
+const Padding(padding: EdgeInsets.all(18.0),
+         child: Text("products sellers"),
+),
+     
         ],
       ) ,
     );

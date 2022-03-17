@@ -15,7 +15,7 @@ class _horizontalListState extends State<horizontalList> {
   @override
   Widget build(BuildContext context) {
     return Container(
-     height: 80,
+     height: 120,
      child: ListView(
        scrollDirection: Axis.horizontal,
        children: const [

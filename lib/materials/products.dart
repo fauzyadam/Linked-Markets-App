@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:linked_markets_app/screens/product_details.dart';
  
  //creation of a class called products
 
@@ -13,12 +14,12 @@ class Products extends StatefulWidget {
 class _ProductsState extends State<Products> {
     var product_list =[
     {
-      "name": " wedding",
+      "name": " Northern Kente",
       "picture": 'assets/images/hajj faith 3.png',
        "price":  "120"
     },
      {
-      "name": " ankara",
+      "name": " Ankara Design",
       "picture": 'assets/images/hajj faith 2.png',
        "price":  "120"
     },
@@ -33,6 +34,23 @@ class _ProductsState extends State<Products> {
        "price":  "120"
     }, 
     
+{
+      "name": " casual wear",
+      "picture": 'assets/images/hajj faith 6.png',
+       "price":  "120"
+    },
+
+{
+      "name": " North kente",
+      "picture": 'assets/images/hajj faith 3.png',
+       "price":  "120"
+    },
+
+ {
+      "name": " ankara",
+      "picture": 'assets/images/hajj faith 2.png',
+       "price":  "120"
+    },
     ];
   @override
   Widget build(BuildContext context) {
@@ -67,7 +85,18 @@ class Single_product extends StatelessWidget {
         tag: product_name,
         child: Material(
           child: InkWell(
-            onTap:() {},
+            onTap:() {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                // passing the values of the products product details screen
+                builder: (BuildContext constext)=> 
+                 ProductDetail(
+                  product_detail_name: product_name, 
+                  product_detail_picture: Product_picture, 
+                  product_detail_price: Product_price,
+                  ))
+            );
+            },
             child: GridTile(
               footer: Container(
                 color: Colors.white,
@@ -87,7 +116,7 @@ class Single_product extends StatelessWidget {
                  style: const TextStyle(
                    fontSize: 10, fontWeight: FontWeight.bold,
                    color: Colors.black,
-                   decoration: TextDecoration.lineThrough,
+                
                    ),
                  ),
                 ),
@@ -96,9 +125,8 @@ class Single_product extends StatelessWidget {
               fit: BoxFit.cover,
               )),
           ),
-          
-           ),
+          ),
         ),
     );
-  }
+   }
 }
