@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:linked_markets_app/materials/horizontal_listview.dart';
 import 'package:linked_markets_app/materials/products.dart';
+import 'package:linked_markets_app/screens/Cart.dart';
+import 'package:linked_markets_app/screens/product_details.dart';
+
+
 
 
 
@@ -16,24 +20,50 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     Widget image_carousel = Container(
+     
       height: 200,
-      child: Carousel(
-        boxFit: BoxFit.cover,
-        images:const [
-          AssetImage('assets/images/kente 1.jpg'),
-          AssetImage('assets/images/kente 2.jpg'),
-          AssetImage('assets/images/watch 1.jpg'),
-          AssetImage('assets/images/watch 2.jpg'),
-          AssetImage('assets/images/hajj faith 7.png'),
-          AssetImage('assets/images/todo 5.jpg'),
-          AssetImage('assets/images/todo 3.jpg'),
-        ],
-        autoplay:false,
-        animationCurve: Curves.fastOutSlowIn,
-        animationDuration: const Duration(milliseconds: 10),
-        dotSize: 4.0,
-        indicatorBgPadding: 8.0,
-      ),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(5,5,20,5),
+              child: Text(
+              "My Categories"
+               
+                ),
+                
+            ),
+        
+            SizedBox(
+              height: 10,
+            ),
+          
+           Container(
+           height: 150,
+           
+           child:  Carousel(
+          boxFit: BoxFit.cover,
+          images:const [
+            AssetImage('assets/images/kente 1.jpg'),
+            AssetImage('assets/images/kente 2.jpg'),
+            AssetImage('assets/images/watch 1.jpg'),
+            AssetImage('assets/images/watch 2.jpg'),
+            AssetImage('assets/images/hajj faith 7.png'),
+            AssetImage('assets/images/todo 5.jpg'),
+            AssetImage('assets/images/todo 3.jpg'),
+          ],
+          autoplay:false,
+          animationCurve: Curves.fastOutSlowIn,
+          animationDuration: const Duration(milliseconds: 10),
+          dotSize: 4.0,
+          indicatorBgPadding: 8.0,
+        ),
+           )
+        
+          ],
+          ),
+      )
+
     );
     return Scaffold(
       appBar: AppBar(
@@ -58,7 +88,7 @@ class _HomePageState extends State<HomePage> {
             IconButton(onPressed: (){
 Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (BuildContext context)=> const Card()));
+                builder: (BuildContext context)=> const Cart()));
 
             }, 
           icon: const Icon(
@@ -113,7 +143,7 @@ Navigator.of(context).push(
           onTap: (){
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (BuildContext context)=> const Card()));
+                builder: (BuildContext context)=> const Cart()));
           },
           child: const ListTile(
             title: Text("Shopping Cart"),
@@ -153,25 +183,40 @@ Navigator.of(context).push(
         children: [
           // image_carousel begins here
          image_carousel ,
-         const Padding(padding: EdgeInsets.all(8.0),
-         child: Text("Categories"),
-),
+//          const Padding(padding: EdgeInsets.all(8.0),
+//          child: Text("Categories"),
+// ),
       // horizontal listView begins here
       horizontalList(),
-              const Padding(padding: EdgeInsets.all(18.0),
+   
+              const Padding(
+                padding: EdgeInsets.all(18.0),
          child: Text("Recent Products"),
-),
-     // grid view
+        ),
+    //grid view
+     
       Container(
         height: 320,
         child: Products(),
       ),
-const Padding(padding: EdgeInsets.all(18.0),
-         child: Text("products sellers"),
-),
+     const Padding(
+                padding: EdgeInsets.all(18.0),
+         child: Text(" long Dresses "),
+        ),
+ Container(
+        height: 600,
+        child: Products(),
+      ),
+
+
+
+      //   Container(
+      //   height: 320,
+      //   child: ReadyToWear(),
+      // ),
      
-        ],
-      ) ,
-    );
+
+        ])
+        );
   }
 }

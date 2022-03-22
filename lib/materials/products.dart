@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:linked_markets_app/screens/product_details.dart';
- 
+
+
  //creation of a class called products
 
 class Products extends StatefulWidget {
@@ -24,8 +25,8 @@ class _ProductsState extends State<Products> {
        "price":  "120"
     },
     {
-      "name": " casual wear",
-      "picture": 'assets/images/hajj faith 6.png',
+      "name": " Shoe",
+      "picture": 'assets/images/foot 4.jpeg',
        "price":  "120"
     },
     {
@@ -51,7 +52,11 @@ class _ProductsState extends State<Products> {
       "picture": 'assets/images/hajj faith 2.png',
        "price":  "120"
     },
+    
     ];
+
+
+  
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
@@ -64,7 +69,8 @@ class _ProductsState extends State<Products> {
       Product_picture: product_list[index]['picture'],
       Product_price:  product_list[index]['price'],
     );
-  });
+  }
+  );
   }
 }
 class Single_product extends StatelessWidget {
@@ -130,3 +136,5 @@ class Single_product extends StatelessWidget {
     );
    }
 }
+
+

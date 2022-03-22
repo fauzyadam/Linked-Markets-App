@@ -252,7 +252,8 @@ class _ProductDetailState extends State<ProductDetail> {
          Container(
            height: 360,
            child: Similar_Products(),
-         )
+         ),
+         
         ],
     )
     );
@@ -289,8 +290,8 @@ class _ProductDetailState extends State<ProductDetail> {
     }, 
 
 {
-      "name": " Northern kente",
-      "picture": 'assets/images/hajj faith 3.png',
+      "name": " Shoe",
+      "picture": 'assets/images/foot 4.jpeg',
        "price":  "120"
     },
 
@@ -299,6 +300,20 @@ class _ProductDetailState extends State<ProductDetail> {
       "picture": 'assets/images/hajj faith 2.png',
        "price":  "120"
     },
+{
+      "name": " Shoe",
+      "picture": 'assets/images/foot 4.jpeg',
+       "price":  "120"
+    },
+
+ {
+      "name": " ankara",
+      "picture": 'assets/images/hajj faith 2.png',
+       "price":  "120"
+    },
+
+
+
     ];
   @override
   Widget build(BuildContext context) {
