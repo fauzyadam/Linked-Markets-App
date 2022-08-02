@@ -12,25 +12,27 @@ class horizontalList extends StatefulWidget {
 }
 
 class _horizontalListState extends State<horizontalList> {
+
+
   @override
   Widget build(BuildContext context) {
     return Container(
-     height: 120,
-     child: ListView(
-       scrollDirection: Axis.horizontal,
-       children: const [
-       Category(image_location: 'assets/images/kente 1.jpg', 
-       image_caption: 'kente'),
-        Category(image_location: 'assets/images/watch 1.jpg', 
-       image_caption: 'watch'),
-       Category(image_location: 'assets/images/abaya 1.jpg', 
-       image_caption: 'abaya'),
-      Category(image_location: 'assets/images/foot 4.jpeg', 
-       image_caption: 'foot'),
-       Category(image_location: 'assets/images/hajj faith 6.png', 
-       image_caption: 'fashion'),
-       ],
-     ), 
+     
+    //  child: ListView(
+    //    scrollDirection: Axis.horizontal,
+    //    children: const [
+    //    Category(image_location: 'assets/images/kente 1.jpg', 
+    //    image_caption: 'kente'),
+    //     Category(image_location: 'assets/images/watch 1.jpg', 
+    //    image_caption: 'watch'),
+    //    Category(image_location: 'assets/images/abaya 1.jpg', 
+    //    image_caption: 'abaya'),
+    //   Category(image_location: 'assets/images/foot 4.jpeg', 
+    //    image_caption: 'foot'),
+    //    Category(image_location: 'assets/images/hajj faith 6.png', 
+    //    image_caption: 'fashion'),
+    //    ],
+    //  ), 
     );
   }
 }
