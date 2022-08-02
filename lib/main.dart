@@ -4,8 +4,8 @@ import 'package:carousel_pro/carousel_pro.dart';
 import 'package:linked_markets_app/materials/horizontal_listview.dart';
 import 'package:linked_markets_app/screens/cart.dart';
 import 'package:linked_markets_app/materials/cart_product.dart';
-
-
+import 'package:linked_markets_app/screens/color_screen.dart';
+import 'package:linked_markets_app/screens/Sizes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.  
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -36,4 +36,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
